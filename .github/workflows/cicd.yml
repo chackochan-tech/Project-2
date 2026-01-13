@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Greeting
-        run: echo "hello world"
+      - name: Checkout code
+        uses: actions/checkout@v2  # Checkout the code from your GitHub repository
+
+      - name: Deploy to Vercel
+        run: |
+          npx vercel --prod  # Deploy to Vercel production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Your Vercel token for authentication
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}  # Optional, Vercel organization ID
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}  # Optional, Vercel project ID
     
