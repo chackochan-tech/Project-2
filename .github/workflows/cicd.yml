@@ -36,5 +36,5 @@ jobs:
         uses: netlify/actions/cli-action@v2
         with:
           publish-dir: ./build  # or ./dist for React/Vite
-          netlify-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          site-id: ${{ secrets.NETLIFY_SITE_ID }}
+          netlify-token: ${{3qE7QSMzzHEzk7tZPgFybGKI7n08yoF-9h3-5O6gCTs}}
+          site-id: ${{nfp_iMSMoH4iaj8Z2qHg8sMDs2TjnUNr7jYE91fd}}
