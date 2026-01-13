@@ -2,39 +2,13 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+    branches: [main]
+  
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Step 2: Set up Node.js (for React, or skip for HTML only)
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      # Step 3: Install dependencies (only for React/Vite projects)
-      - name: Install dependencies
-        run: npm install
-
-      # Step 4: Run build (only for React/Vite projects)
-      - name: Build the project
-        run: npm run build
-
-      # Step 5: Deploy to Netlify (Only for deployment)
-      - name: Deploy to Netlify
-        uses: netlify/actions/cli-action@v2
-        with:
-          publish-dir: ./build  # or ./dist for React/Vite
-          netlify-token: ${{3qE7QSMzzHEzk7tZPgFybGKI7n08yoF-9h3-5O6gCTs}}
-          site-id: ${{nfp_iMSMoH4iaj8Z2qHg8sMDs2TjnUNr7jYE91fd}}
+      - name: Greeting
+        run: echo "hello world"
+    
