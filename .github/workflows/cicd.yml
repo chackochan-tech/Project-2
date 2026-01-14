@@ -13,10 +13,9 @@ jobs:
         uses: actions/checkout@v2  # Checkout the code from your GitHub repository
 
       - name: Deploy to Vercel
-        run: |
-          npx vercel --prod  # Deploy to Vercel production
-        env:
-          VERCEL_TOKEN: ${{VERCEL_TOKEN}}  # Your Vercel token for authentication
-          VERCEL_ORG_ID: ${{VERCEL_USER_ID}}  # Optional, Vercel organization ID
-          VERCEL_PROJECT_ID: ${{VERCEL_PROJECT_ID}}  # Optional, Vercel project ID
+        run:  npx vercel --token ${{secrets.VERCEL_TOKEN}} --prod --confirm
+        env:  
+          VERCEL_ORG_ID: ${{secrets.VERCEL_USER_ID}}  
+          VERCEL_PROJECT_ID: ${{secrets.VERCEL_PROJECT_ID}}  
+
     
