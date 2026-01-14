@@ -16,7 +16,7 @@ jobs:
         run: |
           npx vercel --prod  # Deploy to Vercel production
         env:
-          VERCEL_TOKEN: ${{Vercel_Token}}  # Your Vercel token for authentication
-          VERCEL_ORG_ID: ${{Vercel_user_id}}  # Optional, Vercel organization ID
-          VERCEL_PROJECT_ID: ${{Vercel_Project_id}}  # Optional, Vercel project ID
+          VERCEL_TOKEN: ${{VERCEL_TOKEN}}  # Your Vercel token for authentication
+          VERCEL_ORG_ID: ${{VERCEL_USER_ID}}  # Optional, Vercel organization ID
+          VERCEL_PROJECT_ID: ${{VERCEL_PROJECT_ID}}  # Optional, Vercel project ID
     
