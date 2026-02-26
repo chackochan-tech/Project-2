@@ -64,12 +64,10 @@
         <footer>
             Built with HTML & CSS • Happy Coding 😊
         </footer>
+<h2 class="bg-red-500 ">Hello Test World</h2>
+    <a href="./again.html">
+      <button class="next-btn">Next</button></a>
     </div>
 
 </body>
- <body>
-    <h2 class="bg-red-500 ">Hello Test World</h2>
-    <a href="./again.html">
-      <button class="next-btn">Next</button></a>
-  </body>
 </html>
